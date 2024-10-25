@@ -1,0 +1,731 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #35355e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+}
+.case-image{
+    max-width: 100px;
+    display:flex;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    padding: 10px 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8);
+}
+
+.header_games {
+    display: flex;
+    gap: 20px;
+    margin-left: 85px;
+}
+
+.header_games a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header_games a:hover {
+    color: #f1c40f;
+}
+
+.content {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.case-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.case-opening-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.case-box {
+    background-color: #1c1c32;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.item-roller {
+    display: flex;
+    gap: 10px;
+    height: auto;
+    position: absolute;
+
+    left: 0;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-roller img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 8px;
+}
+
+.open-case-btn {
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.open-case-btn:hover {
+    background-color: #d4a019;
+}
+
+.reward-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reward-box {
+    background-color: #1c1c32;
+    border-radius: 12px;
+    padding: 20px; /* Ensure there's enough padding */
+    text-align: center;
+}
+
+.reward-box img {
+    max-width: 100px; /* Adjust size as needed */
+    margin-bottom: 10px;
+}
+
+.reward-box p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0; /* Add margin to separate text elements */
+}
+
+/* Add specific styles for the price */
+#rewardPrice {
+    font-size: 16px; /* Set a smaller font size if necessary */
+    color: #FFD700; /* Gold color for emphasis */
+    margin-top: 10px; /* Space above the price */
+}
+
+/* Остальной CSS остается таким же... */
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size */
+}
+
+.header_games a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Case title */
+.case-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Center line */
+.center-line {
+    width: 2px;
+    height: 50px;
+    background-color: #000; /* Line color */
+    margin: 0 auto 20px;
+}
+
+/* Case opening section */
+.case-opening-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Item roller box */
+.case-box {
+    width: 400px; /* Width of the roller */
+    height: 100px; /* Height of the roller */
+    overflow: hidden; /* Hide overflow */
+    position: relative;
+    border: 2px solid #000; /* Optional border */
+    background-color: #fff; /* Background color of the box */
+}
+
+/* Item roller styles */
+.item-roller {
+    display: flex;
+    position: absolute;
+    transition: transform 0.5s ease; /* Smooth transition */
+    
+}
+
+/* Item image styles */
+.item-roller img {
+    width: 80px; /* Image width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 5px; /* Space between items */
+}
+
+/* Open case button styles */
+.open-case-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.open-case-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Reward section styles */
+.reward-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reward-box img {
+    width: 100px; /* Adjust image size for reward */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Остальной CSS остается без изменений... */
+.center-line {
+    width: 2px; /* Width of the line */
+    height: 80px; /* Height of the line, adjust as needed */
+    background-color: #000; /* Line color */
+    position: absolute; /* Positioning */
+    left: 50%; /* Center horizontally */
+    top: 20px; /* Adjust to position vertically within the case box */
+    transform: translateX(-50%); /* Adjust to truly center the line */
+    z-index: 1; /* Bring the line above other content */
+}
+
+/* Case opening section */
+.case-opening-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Make the parent position relative for absolute children */
+}
+
+/* Case box styles */
+.case-box {
+    width: 500px; /* Width of the roller */
+    height: 120px; /* Adjust height of the roller */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Required for absolute positioning of the line */
+    border: 5px solid rgb(24, 24, 43); /* Optional border */
+    background-color: #2f2f54 /* Background color of the box */
+}
+
+
+
+
+
+
+.panel-bar {
+    display: flex;
+    padding: 10px;
+    margin-top: 70px;
+    width:100%;
+    background-color: rgb(47, 47, 84);
+    justify-content: space-between; /* Разделяет панели равномерно по ширине */
+    gap: 5px; /* Устанавливает минимальные отступы между элементами */
+}
+
+.panel-item {
+    flex-grow: 1; /* Заставляет элементы равномерно занимать всю доступную ширину */
+    height: 100px;
+    background-color: #1c1c32;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Убираем отступы, чтобы панели плотно прилегали */
+    overflow: hidden;
+}
+
+.panel-item img {
+    max-width: 80px;
+    max-height: 80px;
+    opacity: 0.8;
+}
+
+.panel-item .percentage {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: #FFD700; /* Золотой цвет */
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/* Стили для новой панели */
+/* Панель кейса */
+.case-panel {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1d1f2f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Информация о кейсе */
+.case-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.case-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.case-description {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+/* Рейтинг со звездами */
+.case-rating {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: #ffd700; /* Золотые звезды */
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Секция рекомендаций */
+.recommended-section {
+    margin-top: 20px;
+}
+
+.recommended-section h3 {
+    color: #4db9ff;
+    margin-bottom: 10px;
+}
+
+.recommended-items {
+    display: flex;
+    gap: 20px;
+}
+
+.recommended-item {
+    background-color: #2a2d3b;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommended-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.recommended-item p {
+    margin: 5px 0;
+    color: #fff;
+}
+
+
+
+
+/* Общая панель */
+.diagonal-panel {
+    background-color: #1d1f2f;
+    padding: 20px;
+    transform: skewY(-5deg); /* Наклон всей секции */
+    margin: 30px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.diagonal-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    right: -1000px;
+    bottom: 0;
+    background-color: #1d1f2f;
+    z-index: -1;
+    transform: skewY(5deg);
+}
+
+/* Содержание панели */
+.panel-content {
+    transform: skewY(5deg); /* Откатываем наклон для внутреннего контента */
+}
+
+/* Информация о кейсе */
+.case-title-section {
+    margin-bottom: 20px;
+}
+
+.case-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.case-description {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.case-rating {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: #ffd700; /* Золотые звезды */
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Рекомендуемые предметы */
+.recommended-section h3 {
+    color: #4db9ff;
+}
+
+.recommended-items {
+    display: flex;
+    gap: 20px;
+}
+
+.recommended-item {
+    background-color: #2a2d3b;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommended-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.recommended-item p {
+    color: #fff;
+    margin: 5px 0;
+}
+.items-list {
+    margin-top: 40px;
+    text-align: center;
+    background-color: rgb(53, 53, 94);
+}
+.items-list h2{
+    padding-bottom: 50px;
+}
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 750px;
+}
+
+.item-card {
+    background-color: #2a2d3b;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: auto;
+}
+
+.item-card h3 {
+    font-size: 14px;
+    color: #ffd700;
+    margin: 5px 0;
+}
+
+.item-card p {
+    color: white;
+    margin: 0;
+}
+
+
+
+
+.diagonal-panel {
+    background-color: #1d1f2f; /* Фоновый цвет */
+    padding: 40px 20px; /* Отступы */
+    transform: skewY(-5deg); /* Скошенность панели */
+    margin: 30px 0; /* Отступы сверху и снизу */
+    position: relative; /* Для позиционирования внутренних элементов */
+    z-index: 1; /* Повышаем уровень z для перекрытия */
+    border-radius: 12px; /* Скругление углов */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тень для глубины */
+}
+
+.panel-content {
+    transform: skewY(5deg); /* Противоположная скошенность для контента */
+    display: flex; /* Флекс-контейнер для выравнивания содержимого */
+    justify-content: space-between; /* Равномерное распределение пространства */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 20px; /* Промежуток между элементами */
+}
+
+.case-left, .case-right {
+    background-color: #2e2f44; /* Цвет фона для левой и правой частей */
+    border-radius: 12px; /* Скругление углов */
+    padding: 20px; /* Отступы */
+    width: 100%; /* Занять 100% ширины контейнера */
+    max-width: 480px; /* Максимальная ширина */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.2s; /* Плавный эффект при наведении */
+}
+
+
+
+.case-title {
+    font-size: 24px; /* Размер заголовка */
+    color: #FFD700; /* Цвет заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.case-description {
+    font-size: 16px; /* Размер описания */
+    color: #cccccc; /* Цвет описания */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.case-rating {
+    display: flex; /* Флекс-контейнер для рейтинга */
+    align-items: center; /* Вертикальное выравнивание */
+}
+
+.case-rating span {
+    margin-right: 10px; /* Отступ между текстом и звездами */
+}
+
+.stars {
+    color: #FFD700; /* Цвет звезд */
+    font-size: 18px; /* Размер звезд */
+}
+
+.recommended-items {
+    display: flex; /* Флекс-контейнер для рекомендуемых предметов */
+    gap: 15px; /* Промежуток между предметами */
+    flex-wrap: wrap; /* Перенос при нехватке места */
+}
+
+.recommended-item {
+    background-color: #2e2f44; /* Цвет фона для рекомендуемого предмета */
+    border-radius: 12px; /* Скругление углов */
+    padding: 10px; /* Отступы */
+    text-align: center; /* Центрирование текста */
+    width: 120px; /* Фиксированная ширина для предметов */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.2s; /* Плавный эффект при наведении */
+    cursor: pointer;
+}
+
+.recommended-item:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.recommended-title {
+    font-size: 14px; /* Размер заголовка для рекомендуемых предметов */
+    color: #ffffff; /* Цвет текста */
+    margin: 5px 0; /* Отступы */
+}
+
+.recommended-price {
+    font-size: 14px; /* Размер цены */
+    color: #FFD700; /* Цвет цены */
+}
+
+
+
+
+.image_case {
+    display: flex;
+    align-items: center;
+}
+
+.case-image {
+    max-width: 100px;
+    height: auto;
+    /* Добавим отступы справа, если нужно больше места между картинкой и текстом */
+}
+.case-title{
+    display: flex;
+    align-items: center;
+}
+
+
+/* Add this section to your existing CSS */
+.preset-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.preset-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1c40f;
+    color: #333;
+    cursor: pointer;
+    margin: 0 5px; /* Add space between buttons */
+    transition: background-color 0.3s;
+}
+
+.preset-button:hover {
+    background-color: #d4a019;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c2c54;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column; /* Allows stacking elements vertically */
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes the full height */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    padding: 10px 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.panel-bar {
+    display: flex;
+    padding: 10px;
+    margin-top: 60px; /* Adjust to create space below the header */
+    background-color: rgb(47, 47, 84);
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%; /* Make the panel-bar full width */
+}
+
+.panel-item {
+    flex-grow: 1; 
+    height: 100px;
+    background-color: #1c1c32;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; 
+    overflow: hidden;
+}
+
+.panel-item img {
+    max-width: 80px;
+    max-height: 80px;
+    opacity: 0.8;
+}
+
+.container {
+    background: #3c3c7b;
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 20px; 
+}

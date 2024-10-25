@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Opening</title>
+    <link rel="stylesheet" href="styles-cases.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            </div>
+            <nav class="header_games">
+                <a href="#">Home</a>
+                <a href="#">Cases</a>
+                <a href="#">My Items</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1 class="case-title">Case Opening</h1>
+
+        <!-- Блок кейса -->
+        <div class="case-opening-section">
+            <div class="case-box" id="case-box">
+                <div class="item-roller" id="item-roller">
+                    <!-- Картинки предметов будут динамически добавлены через JavaScript -->
+                </div>
+                <div class="center-line"></div>
+            </div>
+            <button class="open-case-btn" id="open-case-btn">Open Case</button>
+        </div>
+
+        <!-- Секция с наградой -->
+        <div class="reward-section">
+            <div class="reward-box" id="reward-box">
+                <img id="reward-image" src="#" alt="Reward">
+                <p id="reward-name"></p>
+                <p id="rewardPrice"></p>
+            </div>
+        </div>
+
+        <!-- Список предметов пользователя -->
+        <div class="items-list">
+            <h2>Your Items</h2>
+            <div class="items-container" id="items-container">
+                <!-- Карточки предметов будут добавлены динамически -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('open-case-btn').addEventListener('click', function() {
+            // Отправляем запрос на сервер для открытия кейса
+            fetch('/open_case', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => response.json()).then(data => {
+                // Обновляем интерфейс по результатам открытия кейса
+                updateCaseRoller(data.items);
+                displayReward(data.reward);
+                updateUserItems(data.userItems);
+            });
+        });
+
+        function updateCaseRoller(items) {
+            const itemRoller = document.getElementById('item-roller');
+            itemRoller.innerHTML = '';  // Очищаем предыдущие предметы
+            items.forEach(item => {
+                const img = document.createElement('img');
+                img.src = item.image;
+                itemRoller.appendChild(img);
+            });
+
+            // Прокрутка предметов
+            itemRoller.style.transform = 'translateX(-50%)';  // Пример эффекта
+        }
+
+        function displayReward(reward) {
+            const rewardImage = document.getElementById('reward-image');
+            const rewardName = document.getElementById('reward-name');
+            const rewardPrice = document.getElementById('rewardPrice');
+
+            rewardImage.src = reward.image;
+            rewardName.textContent = reward.name;
+            rewardPrice.textContent = `Price: $${reward.price}`;
+        }
+
+        function updateUserItems(items) {
+            const itemsContainer = document.getElementById('items-container');
+            itemsContainer.innerHTML = '';  // Очищаем старые данные
+
+            items.forEach(item => {
+                const itemCard = document.createElement('div');
+                itemCard.classList.add('item-card');
+
+                const img = document.createElement('img');
+                img.src = item.image;
+
+                const itemName = document.createElement('h3');
+                itemName.textContent = item.name;
+
+                const itemPrice = document.createElement('p');
+                itemPrice.textContent = `Price: $${item.price}`;
+
+                itemCard.appendChild(img);
+                itemCard.appendChild(itemName);
+                itemCard.appendChild(itemPrice);
+
+                itemsContainer.appendChild(itemCard);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Opening Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-cases.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="header.html">
+                    <img src="logo.png" alt="Epic Loot" class="glow-logo"></a>
+            </div>
+            <nav class="header_games">
+
+                <a href="header.html">Case</a>
+                <a href="invoker.html">Daily game</a>
+
+                <a href="crash.html">Crash</a>
+            </nav>
+        </div>
+        
+    </header>
+    <div class="panel-bar">
+
+        <div class="panel-item">
+            <img src="item1.png" alt="Item 1">
+
+        </div>
+        <div class="panel-item">
+            <img src="item2.png" alt="Item 2">
+
+        </div>
+        <div class="panel-item">
+            <img src="item3.png" alt="Item 3">
+
+        </div>
+        <div class="panel-item">
+            <img src="item4.png" alt="Item 4">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+   
+        
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    
+    <div class="content">
+        <h1 class="case-title">Epic Case</h1>
+        <div class="case-opening-section">
+
+            <div class="center-line"></div>
+            
+            <div class="case-box">
+                <div class="item-roller" id="itemRoller">
+                   
+                </div>
+            </div>
+
+            <button class="open-case-btn" id="openCaseBtn">Open Case</button>
+        </div>
+
+        <div class="reward-section" id="rewardSection" style="display: none;">
+            <h2>You won:</h2>
+            <div class="reward-box">
+                <img id="rewardImage" src="" alt="Reward Item">
+                <p id="rewardName"></p>
+                <p id="rewardPrice"></p> 
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="diagonal-panel">
+    <div class="panel-content">
+        <div class="case-left">
+            
+            <div class="image_case">
+                <img class="case-image" src="case-image.png" alt="Снова на завод">
+            </div><div class="name_case"><h2 class="case-title">фыв</h2></div>
+            <p class="case-description">После первой смены на заводе, пора на вторую смену на EL!</p>
+            <div class="case-rating">
+                <span>Рейтинг:</span>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+
+        <div class="case-right">
+            <h3>Рекомендуем к открытию:</h3>
+            <div class="recommended-items">
+                <a href="case_def.html?dropType=3">
+                <div class="recommended-item">
+                    <img src="https://e.snmc.io/i/600/s/af235eaf9d17c3f703027c1140cc3c92/10053487/%D1%81%D0%B5%D1%80%D1%91%D0%B3%D0%B0-%D0%BF%D0%B8%D1%80%D0%B0%D1%82-serega-pirat-%D1%82%D0%BF-%D0%BD%D0%B0-%D0%B0%D0%BC%D0%B5-cover-art.jpg" alt="Популярный предмет">
+                    <p class="recommended-title">Популярный</p>
+                    <p class="recommended-price">198грн</p></a>
+                </div>
+                <a href ="case_def.html?dropType=2">
+                <div class="recommended-item">
+                    <img src="file:///C:/Users/ponch/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/dota_casino/photo3.jpg" alt="Рекомендуемый предмет">
+                    <p class="recommended-price">19грн</p>
+                </div></a><a href ="case_def.html?dropType=5">
+                <div class="recommended-item">
+                    <img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/c/c2/Cosmetic_icon_Collector%27s_Cache_II_2019.png/revision/latest?cb=20190713211735" alt="Рекомендуемый предмет">
+                    <p class="recommended-price">70грн</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="items-list" id="itemsList">
+    <h2>Все предметы</h2>
+    
+    <div class="items-container"></div>
+</div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+    
+    <script>
+
+
+
+
+
+
+
+        function setCookie(name, value, days) {
+            const expires = new Date(Date.now() + days * 864e5).toUTCString();
+            document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+        }
+
+
+        function getCookie(name) {
+            return document.cookie.split('; ').reduce((r, v) => {
+                const parts = v.split('=');
+                return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+            }, '');
+        }
+
+
+        function savePanelsState() {
+            const state = Array.from(document.querySelectorAll('.panel')).map(panel => {
+                return panel.classList.contains('open') ? '1' : '0';
+            }).join('');
+            setCookie('panelState', state, 7); 
+        }
+
+
+        function loadPanelsState() {
+            const state = getCookie('panelState');
+            if (state) {
+                const panels = document.querySelectorAll('.panel');
+                panels.forEach((panel, index) => {
+                    if (state[index] === '1') {
+                        panel.classList.add('open');
+                    }
+                });
+            }
+        }
+
+
+        document.querySelectorAll('.panel h3').forEach(header => {
+            header.addEventListener('click', function() {
+                const panel = this.parentElement;
+                panel.classList.toggle('open');
+                savePanelsState(); 
+            });
+        });
+
+
+        window.onload = loadPanelsState;
+
+function updateCookies() {
+
+    document.cookie = "winners_panel=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+
+    let newCookies = getNewCookies(); 
+
+
+    document.cookie = "winners_panel=" + newCookies + "; path=/; max-age=3600"; 
+}
+
+
+function getNewCookies() {
+
+    return "новые_данные"; 
+}
+
+window.addEventListener('scroll', function() {
+    updateCookies();
+});
+
+
+
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const dropType = urlParams.get('dropType');
+
+        let they_can_drop = [];
+        
+        switch (dropType) {
+            case '1':
+                they_can_drop = [
+                    { name: "Сапожки на кунку", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcU5vBVWR02fS-GqxPDSV1B9NwVVur-kLwppwfLETjFD_tuz2tPSxKX2YOKDk20GsJdw2LDDrI2s3FaxqkFrMmGgJYGScVJtMl_RqACggbC4lzaxFxQ/360fx360f", price: 1106722, rarity: "Legendary" },
+                    { name: "вонючий дк хук", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUivB9aSQPAUuCq0vDAWFh4IBBYuIWtJAhr7PHHdSR94N2kk4XFlvahZurTlDoJ65Qni-2U997z0AW3-xY5YDqndYCXIw8_NF7V_AToyPCv28HpnWRhMA/360fx360f", price: 2, rarity: "Epic" },
+                ];
+                document.querySelector('.name_case').innerHTML = `<h2 class="case-title">все или ничего</h2>`;
+                document.querySelector('.case-description').innerHTML = `Проверь свою удачу что ты выбьешь крутые шапокляки или вонючую кость`;
+             
+                document.querySelector('.image_case').innerHTML = `<img src="https://epicloot.one/assets/img/cases/0b4dd358a90c2fcf47e42e23dc642dff6bb0.webp" class="case-image" alt="Case 1" >`;
+                break;
+            case '2':
+            they_can_drop = [
+                    
+                    { name: "Altar Ball", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcU7plRUQ3PTRuiswcrBUhJ9KjtUt7akPQJy0szEcC9F6ZKzx9HSxaPxZr7Uwz8JsZNziL6SrdrzjQWyrkVsMTqmLNXEJgc7YVuD5BHglho4UbDm/360fx360f", price: 77.34, rarity: "Epic" },
+                    { name: "Genuine Golden Gravelmaw", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcU3qAlJRF_YRu-oxYDHXElxKDtTpLuiJAlfxPLEfXJW48izmb-PhfbzPLWAqWdQ-sJ0xL6VrdSh3FLl_0c4MD_wddeRJwQ-YVrV_wC6yLu6jMS76ZzKnXphu3Q8pSGKcvjc4o8/360fx360f", price: 7987.25, rarity: "Legendary" },
+                    { name: "Golden Reel Guardian", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXQ5BhMYY49vRpiRVjVStuq2MPXVlNLNwFSuoWiPgZy1_rJfwJR6ciJmIGZkPK6MOjTlW8CvJIp2u3ApN-ljQSw-hU5Mj_1INPHdgM5YF7RrlTsyOu8g4j84socYxKziw/360fx360f", price: 0.65, rarity: "Common" },
+                    { name: "Helm of Impasse", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcU3qAlJRF_YRu-oxYDbVlF5GgtRibOoOwZzwPaHeThO4eO5kr-Cmuf1IKjUqWdQ-sJ0xLrCpNn3iVLg-URrMWvyIYPAIVA3Nw3V_1G_krq5hJK-v5rNmyNnunQ8pSGKEShxwfE/360fx360f", price: 0.42, rarity: "Common" },
+                    { name: "Gambits of Nishai Pauldrons", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcU3qAlJRF_YRu-oxYDAW1x_IBZotbKgOBRf2P3BdjVW092kmZPEhP_1OL7DqWhZ7dZiteLP_Iv9nGu1uR4vDDWiZtHAbFc8Z1uB_Va5k-661MTp6Z_MzHRnsiMi5H_UnUe2hB4da7FngPLPS1iAR_seaaGpNp0/360fx360f", price:14.9, rarity: "Common" },
+                    { name: "Mischievous Dragon", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi2sbAUFV9IBJYo6mhOQZn3P33fTxQ69n4xoTfla6nYLrQlDtV6cdz07qYoIn2jgeyrUdoYzv3dY6VcAA6ZwqC-0_-n7nxQsWNVg/360fx360f", price:1.98, rarity: "Common" },
+                   
+                    { name: "Vanishing Pearl", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXQ5BhMYY49vRpiRVjVStu71sHaQFV9KwNopr-kOQtf3_LadjgM6ITgkdbblq6hY-6JxzIGusB0iLqTptiniVWy-RVpYDuiLYHAJlRoZUaQpAZ6gDu08w/360fx360f", price:16.11, rarity: "Common" },
+                    
+                    { name: "Merry Wanderer's Brush", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUivBhWA0HVVfa06NjSXVlxNwFFpYWnORJz28zccDROo9GzhpKSqOD1Pb_UhG5D-_pzmPzS_bPhiV24lB89IT6mOoaSc1U5MF2GrwPrw-bs08TvvsnJmyRjsyQi53ffnx3h1BtMPLc5jKGACQLJ459WqSk/360fx360f", price:60.84, rarity: "Epic" },
+                    { name: "Orb of Reminiscence", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUivBhWA17VSu2j3tzQVlN3IDtfs7uhZBVl3vrGeC5B6dK1kb-DkvbwDLfQhGxUpsQmieySptqt0Vfir0NoZGn0JYHAdw46NQzZr1W9xO3q0cW66cyamyR9-n51YnWvnPY/360fx360f", price:21.71, rarity: "Epic" },
+                ];
+                document.querySelector('.name_case').innerHTML = `<h2 class="case-title">Старый бог💪</h2>`;
+                document.querySelector('.case-description').innerHTML = `Плохого когда твою девушку заберает с клуба мажик`;
+                document.querySelector('.image_case').innerHTML = `<img src="https://gameguru.ru/media/cache/b8/4e/b84e8ae61c4e3eb73d04f10312897550.jpg" class="case-image" alt="Case 1" >`;
+                break;
+            case '3':
+                they_can_drop = [
+                { name: "Guilt of the Survivor", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi0MDXbFh1MQFFib2qLzhl0ufNYwJO492ynY6MhPTmNr7fqWdQ-sJ0xL-WpdqkiwPh-0Zka22nJdDBcAQ2NV-D_QK_x-_p1JK-6JzLz3Bms3Y8pSGKfalpEbI/360fx360f", price: 2189.17, rarity: "Legendary" },
+                { name: "Golden Basher Blades", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXB9AJbIo8h5hlcX0TVVduv287XVk5LIgtbsoWnPglk3_aZTjFD_tuz2oHbwaKgZr6BzjxUu5El0ujDrN_20QTt-hFuY2ulcIXAdFA7NAnZ8lmggbC46jJgMy8/360fx360f", price: 533.49, rarity: "epic" },
+                    
+                    { name: "Shadows of the Forgotten Plane", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXQ5BhMYY49vRpiRVjVStu-387XXEpnGgtRia6tLjhm3OHPfilW6dKJhIyKmfLLP7rDkW4fvJMm0-3Cp9ijiVHs_Bc-amnyctfBJwc2aFnRq1LrkLrmgsDqup7NwWwj5Hesi5SgSg/360fx360f", price: 81.24, rarity: "Rare" },
+                    
+                    { name: "The Gaze of Zebulon", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi0d3cQEl9MxFE5Or0czhkwfzfTjpD9tmJm4a0g__xDKHUlH5d58tOhvr--Y3nj1H6r0tuYD_6cIKUew5tMw7R_gDoxr_ngsfv6MmdzXZru3Ij53rYnxS10gYMMLJbgI-f_Q/360fx360f", price: 178.88, rarity: "Rare" },
+                    { name: "Contessa's Creed", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXQ5BhMYY49vRpiRVjVStuu2MHHVk5nJBdotaigLgNf3_LadjgMvISzzIHfw_SlYOmCw20J6cEk2LjArY2t3w2y-RZqYTrwIoOSIFc_Y0aQpAbXV9eacw/360fx360f", price: 80.41, rarity: "Common" },
+                    { name: "Magus Apex", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcU7pw1SR0nCCOms0NrAbFxkIBwYu7uiPhRf0uPNaW994N2kk4XFkfWsZOrVkjNUuJcn0-uToN-j2wHhqEpuNW7zcofEJgE5MljTqQDtlfCv28HtABiTgw/360fx360f", price:107.44, rarity: "Rare" },
+                    { name: "Exalted Manifold Paradox", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUioRpTWEPdeOW-xM7AQFR6aglWuLOjJAtk7OPJYzxG48T5lZKIlvn1DKvQqWdQ-sJ0xO3Do9mk2FHm_EJsY2_6LI-dd1U-NVyG81m-ye3sjZa0tZrLnyBiuCc8pSGKRLhN9us/360fx360f", price: 897.08, rarity: "Legendary" },
+                    { name: "Inscribed Arms of Desolation", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUhoRpZQ1vvQe2o2cucUk95NjtTs6mqZAZy3uD3dThR4-O6lZKMkrn3YeKCxD0E7pBy3LyZoY-iiQDl_xY9YWD1JYKWI1RtZF3U_QC6kursm9bi6_ACT8R3/360fx360f", price: 301.67, rarity: "Epic" },
+                    { name: "Plunder of the Savage Monger", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi28DBV2J7IztAt6iaJwhh1_rGdi5B_tmzmr-HluXzNvWFk2pQ7Mdy27yY9tT30QDn_BVsZGj3IY-VdwZrZlmD81Lowb-8hMW_ot2XnkPbeyUC/360fx360f", price: 454.87, rarity: "Epic" },
+   
+                    { name: "The Abscesserator", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUivB9aSQPETrX96MbeXlJmMQVbibu3Jg9v3PiHYShG69mJgInax8j9PrbehH9Q5PpwmOT-_YP6g2u4qgE7Nnf3JoaRIVNvM1DT-Fa_yO3p0J-_v8ifzSYy7yV0t3mMzRPh1RBNOLQ8m7XAHsNa85N9/360fx360f", price: 239.22, rarity: "Rare" },
+                    { name: "Hellfire Insurgent", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXQ5BhMYY49vRpiRVjVStul0s7BR1t4LApDiamqOQRlwfbbYgJO7c6xkc6Kk6_1ZLnXwjIJvsAjieuVrNWgjgHiqEc6ZT-nJYSQIFU6ZQ7T8lm2366x0mECZ_13/360fx360f", price: 82.42, rarity: "Rare" },
+                    { name: "Servant of the Sightless Shamans", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXQ5BhMYY49vRpiRVjVStu-0t3FUlNgGgtRia6tLjhz2vTAZTFH_8-Jh4iKmvb6IITdl3lW7Ysm0u-UrdzxilbjqUVkMmvwcY-QewE4MA7R-AC6wO3o1sS9u5jOziBmpGB8smm3Li4X/360fx360f", price: 115.73, rarity: "Rare" },
+                    ];
+
+
+
+
+                    document.querySelector('.name_case').innerHTML = `<h2 class="case-title">Серега пират(талантище)</h2>`;
+                document.querySelector('.case-description').innerHTML = `Я увидел водителя, это действительно Серёга Пират Он завернул направо и... Чёрт, мы его потерялиПохоже, он снова нас переиграл, этот парень слишком крут`;
+                document.querySelector('.image_case').innerHTML = `<img src="https://e.snmc.io/i/600/s/af235eaf9d17c3f703027c1140cc3c92/10053487/%D1%81%D0%B5%D1%80%D1%91%D0%B3%D0%B0-%D0%BF%D0%B8%D1%80%D0%B0%D1%82-serega-pirat-%D1%82%D0%BF-%D0%BD%D0%B0-%D0%B0%D0%BC%D0%B5-cover-art.jpg" class="case-image" alt="Case 1" >`;
+                
+                break;
+            case '4':
+
+
+
+                they_can_drop = [
+
+                    { name: "Sign of the Netherfrost", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXQ5BhMYY49vRpiRVjVSturxcDAR1RiMBdooLO1LhVf1eHBdjRG08-zhpCOmePLP7rDkW4fvpAn3erD94nz2Aex-0Q6Zz31J4SVcwI_ZlzX_1e9x-26gZPp75vJzGwj5He22EAzWg/360fx360f", price: 21.86, rarity: "Rare" },
+                    { name: "Wrath of Ka", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffi2crQQVJ6MAZourWkLzhz0OHNdDN94N2kk4XFlfP1YOvUk21XvZMg3LqSrdyh2wCy-UtlYWCgctKXelc7MwvXrgLtkPCv28HM7yHXoQ/360fx360f", price: 41.47, rarity: "Rare" },
+                    { name: "Acid Hydra", img: "https://community.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXP7g1bJ4Q1lgheXknVSffix8DaQFJ6GgJbr663Khdf3-D3fTxQ69n4x4SKx_b2NeLXxDwJsJEj27vFpN6m0VHgqkc_Nj-gJobBJwE4MFHY-E_-n7khzYR9KQ/360fx360f", price: 5.86, rarity: "Common" },
+     
+
+                ];
+
+
+                document.querySelector('.name_case').innerHTML = `<h2 class="case-title">Токсичный кейс</h2>`;
+                document.querySelector('.case-description').innerHTML = `Все токсичные персонажи в прямом смысле здесь испытайте свою удачу`;
+                document.querySelector('.image_case').innerHTML = `<img src="toxic.png" class="case-image" alt="Case 1" >`;
+                break;
+
+
+
+
+
+
+
+
+
+                case '5':
+
+
+
+they_can_drop = [
+{ name: "Secondhand Sorcery", img: "https://liquipedia.net/commons/images/thumb/4/4b/Cosmetic_icon_Secondhand_Sorcery.png/255px-Cosmetic_icon_Secondhand_Sorcery.png", price: "anone", rarity: "Legendary" },
+{ name: "Crystal Colossus", img: "https://liquipedia.net/commons/images/thumb/2/26/Cosmetic_icon_Crystal_Colossus.png/255px-Cosmetic_icon_Crystal_Colossus.png", price: "anone", rarity: "Epic" },
+{ name: "Undying Love", img: "https://liquipedia.net/commons/images/thumb/f/ff/Cosmetic_icon_Undying_Love.png/255px-Cosmetic_icon_Undying_Love.png", price: "anone", rarity: "Rare" },
+    { name: "Igneous Infernal", img: "https://liquipedia.net/commons/images/thumb/3/34/Cosmetic_icon_Igneous_Infernal.png/255px-Cosmetic_icon_Igneous_Infernal.png", price: "anone", rarity: "Common" },
+    { name: "Bleeding Edge", img: "https://liquipedia.net/commons/images/thumb/e/e7/Cosmetic_icon_Bleeding_Edge.png/255px-Cosmetic_icon_Bleeding_Edge.png", price: "anone", rarity: "Common" },
+    { name: "Magus Mimicry", img: "https://liquipedia.net/commons/images/thumb/d/d2/Cosmetic_icon_Magus_Mimicry.png/255px-Cosmetic_icon_Magus_Mimicry.png", price: "anone", rarity: "Common" },
+    { name: "Seam Ripper Snuggle Time", img: "https://liquipedia.net/commons/images/thumb/6/60/Cosmetic_icon_Seam_Ripper_Snuggle_Time.png/255px-Cosmetic_icon_Seam_Ripper_Snuggle_Time.png", price: "anone", rarity: "Common" },
+    { name: "Angler in the Abyss", img: "https://liquipedia.net/commons/images/thumb/6/62/Cosmetic_icon_Angler_in_the_Abyss.png/255px-Cosmetic_icon_Angler_in_the_Abyss.png", price: "anone", rarity: "Common" },
+    { name: "Phantom Balladeer", img: "https://liquipedia.net/commons/images/thumb/c/c7/Cosmetic_icon_Phantom_Balladeer.png/255px-Cosmetic_icon_Phantom_Balladeer.png", price: "anone", rarity: "Common" },
+    { name: "Bootblack Brawler", img: "https://liquipedia.net/commons/images/thumb/d/d3/Cosmetic_icon_Bootblack_Brawler.png/255px-Cosmetic_icon_Bootblack_Brawler.png", price: "anone", rarity: "Common" },
+    { name: "Needlepoint Necromancer", img: "https://liquipedia.net/commons/images/thumb/4/49/Cosmetic_icon_Needlepoint_Necromancer.png/255px-Cosmetic_icon_Needlepoint_Necromancer.png", price: "anone", rarity: "Common" },
+    { name: "Hare of the Cog", img: "https://liquipedia.net/commons/images/thumb/8/85/Cosmetic_icon_Hare_of_the_Cog.png/255px-Cosmetic_icon_Hare_of_the_Cog.png", price: "anone", rarity: "Common" },
+    { name: "Thundervolt", img: "https://liquipedia.net/commons/images/thumb/0/04/Cosmetic_icon_Thundervolt.png/255px-Cosmetic_icon_Thundervolt.png", price: "anone", rarity: "Common" },
+    { name: "Caprine Chimera", img: "https://liquipedia.net/commons/images/thumb/5/51/Cosmetic_icon_Caprine_Chimera.png/255px-Cosmetic_icon_Caprine_Chimera.png", price: "anone", rarity: "Common" },
+    { name: "Canis Crystallum", img: "https://liquipedia.net/commons/images/thumb/4/4b/Cosmetic_icon_Canis_Crystallum.png/255px-Cosmetic_icon_Canis_Crystallum.png", price: "anone", rarity: "Common" },
+    { name: "Unchained Entropy", img: "https://liquipedia.net/commons/images/thumb/3/3b/Cosmetic_icon_Unchained_Entropy.png/255px-Cosmetic_icon_Unchained_Entropy.png", price: "anone", rarity: "Common" },
+   
+
+
+
+];
+
+
+document.querySelector('.name_case').innerHTML = `<h2 class="case-title">collector's cache 2</h2>`;
+document.querySelector('.case-description').innerHTML = `Коллекторка вышла совсем недавно и уже у нас с лучшим шансом`;
+document.querySelector('.image_case').innerHTML = `<img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/c/c2/Cosmetic_icon_Collector%27s_Cache_II_2019.png/revision/latest?cb=20190713211735" class="case-image" alt="Case 1" >`;
+break;
+
+
+
+
+
+
+
+
+
+
+
+
+            default:
+                they_can_drop = []; 
+        }
+        
+
+        if (they_can_drop.length === 0) {
+            console.error("Список дропов пуст!");
+        }
+
+
+
+        
+        
+
+        
+
+
+
+
+        
+
+        let winners_panel = [];
+        const itemRoller = document.getElementById("itemRoller");
+        const openCaseBtn = document.getElementById("openCaseBtn");
+        const rewardSection = document.getElementById("rewardSection");
+        const rewardImage = document.getElementById("rewardImage");
+        const rewardName = document.getElementById("rewardName");
+        const rewardPrice = document.getElementById("rewardPrice");
+        const itemsContainer = document.querySelector('.items-container');
+        
+        let isAnimating = false; 
+        
+
+function getRandomItem() {
+    const legendaryItems = they_can_drop.filter(item => item.rarity === "Legendary");
+    const epicItems = they_can_drop.filter(item => item.rarity === "Epic");
+    const rareItems = they_can_drop.filter(item => item.rarity === "Rare");
+    const commonItems = they_can_drop.filter(item => item.rarity === "Common");
+
+    while (true) {
+        const randomNum = Math.random();
+
+
+        if (randomNum < 0.05 && legendaryItems.length > 0) {
+
+            return legendaryItems[Math.floor(Math.random() * legendaryItems.length)];
+        } else if (randomNum < 0.25 && epicItems.length > 0) {
+
+            return epicItems[Math.floor(Math.random() * epicItems.length)];
+        } else if (randomNum < 0.65 && rareItems.length > 0) {
+
+            return rareItems[Math.floor(Math.random() * rareItems.length)];
+        } else if (commonItems.length > 0) {
+
+            return commonItems[Math.floor(Math.random() * commonItems.length)];
+        }
+
+
+        if (legendaryItems.length === 0 && epicItems.length === 0 && rareItems.length === 0 && commonItems.length > 0) {
+            return commonItems[Math.floor(Math.random() * commonItems.length)];
+        }
+    }
+}
+
+
+
+        
+
+        function openCase() {
+    if (isAnimating) return; 
+
+    isAnimating = true;
+    openCaseBtn.disabled = true;
+    rewardSection.style.display = "none";
+    
+
+    itemRoller.style.transform = "translateX(0)"; 
+    itemRoller.innerHTML = ''; 
+
+    let items = []; 
+    for (let i = 0; i < 50; i++) {
+        items.push(getRandomItem());
+    }
+
+    items.forEach(item => {
+        const img = document.createElement("img");
+        img.src = item.img;
+        img.alt = item.name;
+        itemRoller.appendChild(img);
+    });
+
+    let offset = 0; 
+    const maxOffset = (items.length - 3) * 100 - 300 + getRandomNumber(-48, 48);
+    const totalDuration = 6000;
+    const startTime = Date.now();
+
+
+    function resetAnimation() {
+        itemRoller.style.transition = "none"; 
+        itemRoller.style.transform = "translateX(0)"; 
+        requestAnimationFrame(() => {
+            itemRoller.style.transition = ""; 
+        });
+    }
+
+    resetAnimation(); 
+
+    function animate() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / totalDuration, 1);
+        const easing = easeOutExpo(progress);
+
+        offset = maxOffset * easing;
+        itemRoller.style.transform = `translateX(-${offset}px)`; 
+
+        if (progress < 1) {
+            requestAnimationFrame(animate); 
+        } else {
+            const finalItem = items[items.length - 4]; 
+            rewardImage.src = finalItem.img;
+            rewardName.innerText = finalItem.name;
+            rewardPrice.innerText = ` ${finalItem.price}грн`;
+
+            rewardSection.style.display = "block"; 
+
+            winners_panel.push(finalItem);
+            displayWinnersPanel();
+
+            openCaseBtn.disabled = false; 
+            isAnimating = false; 
+        }
+    }
+
+    requestAnimationFrame(animate); 
+}
+        
+
+        function displayAllItems() {
+            itemsContainer.innerHTML = ''; 
+        
+            they_can_drop.forEach(item => {
+                const itemCard = document.createElement('div');
+                itemCard.classList.add('item-card');
+        
+                itemCard.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p>Цена: грн ${item.price}</p>
+                    <p>Редкость: ${item.rarity}</p> <!-- Отображение редкости -->
+                `;
+        
+                itemsContainer.appendChild(itemCard);
+            });
+        }
+        
+        function displayWinnersPanel() {
+            const panels = document.querySelectorAll('.panel-item');
+            
+            panels.forEach(panel => {
+                panel.innerHTML = '';
+            });
+        
+            winners_panel.slice(-panels.length).forEach((item, index) => {
+                const img = document.createElement('img');
+                img.src = item.img;
+                img.alt = item.name;
+                panels[panels.length - 1 - index].appendChild(img); 
+            });
+        }
+        
+        function easeOutExpo(t) {
+            return t === 1 ? 1 : 1 - Math.pow(2, -30 * t);
+        }
+        
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        
+        openCaseBtn.addEventListener("click", openCase);
+        
+
+        displayAllItems();
+        </script>
+        
+        
+</body>
+</html>

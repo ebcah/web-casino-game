@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #35355e;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    padding: 10px 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8);
+}
+
+.header_games {
+    display: flex;
+    gap: 20px;
+}
+
+.header_games a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 85px;
+}
+
+.header_games a:hover {
+    color: #f1c40f;
+}
+
+.content {
+    padding-top: 80px;
+}
+
+.panel-bar {
+    display: flex;
+    padding: 10px;
+    margin-top: 60px;
+    background-color: rgb(47, 47, 84);
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.panel-item {
+    flex-grow: 1;
+    height: 100px;
+    background-color: #1c1c32;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.panel-item img {
+    max-width: 80px;
+    max-height: 80px;
+    opacity: 0.8;
+}
+
+.panel-item .percentage {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: #FFD700;
+    font-size: 12px;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #35355e;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a2e;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    height: 300px;
+    width: 90%;
+    max-width: 1800px;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.banner-text {
+    max-width: 50%;
+}
+
+.banner-text h4 {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #f1c40f;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d4a019;
+}
+
+.banner-image img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.case-panel {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #35355e;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.case-item {
+    background-color: #1a1a2e;
+    border-radius: 12px;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.case-item:hover {
+    transform: scale(1.05);
+}
+
+.case-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.case-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.case-score {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #333;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.progress {
+    background-color: #f1c40f;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.case-title {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.case-price button {
+    background-color: #f1c40f;
+    color: #333;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.case-price button:hover {
+    background-color: #d4a019;
+}
+
+.case-item {
+    background-color: #1c1c32;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.case-item img {
+    max-width: 80px;
+    max-height: 80px;
+    margin-right: 10px;
+}
+
+.case-info {
+    flex-grow: 1;
+}
+
+.case-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.case-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

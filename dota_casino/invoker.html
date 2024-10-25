@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoker Game</title>
+    <link rel="stylesheet" href="invoker.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div>
+    <header id="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="header.html">
+                <img src="logo.png" alt="Epic Loot" class="glow-logo"></a>
+            </div>
+            <nav class="header_games">
+                <a href="header.html">Case</a>
+                <a href="invoker.html">Daily game</a>
+
+                <a href="crash.html">Crash</a>
+            </nav>
+        </div>
+    </header>
+    <div class="panel-bar">
+
+        <div class="panel-item">
+            <img src="item1.png" alt="Item 1">
+
+        </div>
+        <div class="panel-item">
+            <img src="item2.png" alt="Item 2">
+
+        </div>
+        <div class="panel-item">
+            <img src="item3.png" alt="Item 3">
+
+        </div>
+        <div class="panel-item">
+            <img src="item4.png" alt="Item 4">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+   
+        
+
+    </div>
+
+    
+
+    <div class="container">
+
+        <div class="left-panel">
+            <h2>Controls</h2>
+            <ul class="controls-list">
+                <li>
+                    <img src="invoker/quas.png" alt="Q - Quas">
+                    <div id="quas_text">Q - Quas</div>
+                </li>
+                <li>
+                    <img src="invoker/wex.png" alt="W - Wex">
+                    <div id="wex_text">W - Wex</div>
+                </li>
+                <li>
+                    <img src="invoker/exort.png" alt="E - Exort">
+                    <div id="exort_text">E - Exort</div>
+                </li>
+                <li>
+                    <img src="invoker/anone.png" alt="D - Spell 1">
+                    <div></div>
+                </li>
+                <li>
+                    <img src="invoker/anone.png" alt="F - Spell 2">
+                    <div></div>
+                </li>
+                <li>
+                    <img src="invoker/invoke.png" alt="R - Invoke">
+                    <div id="invoke_text">R - Invoke</div>
+                </li>
+            </ul>
+            <div class="set-keybinds">
+                <h3>Set Keybinds</h3>
+                <button class="quas">Quas</button>
+                <button class="wex">Wex</button>
+                <button class="exort">Exort</button>
+                <button class="invoke">Invoke</button>
+            </div>
+        </div>
+
+
+        <div class="center-panel">
+            <h1>Invoker bonus game</h1>
+            <h3>Пройдите игру за 15 секунд и получите приятный бонус</h3>
+
+            <div id="spell-image" class="qr-code">
+                <img src="https://media.tenor.com/8V7m5bZUITUAAAAM/invoker.gif" style="width:300px;border-top-left-radius: 90px;border-top-right-radius: 90px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+            </div>
+
+            <div id="timer" class="timer">0.00</div>
+
+            <button id="start-game" class="start-game-btn">Start Game</button>
+
+            <div class="spell-bar" id="spell-bar">
+    
+            </div>
+
+            <div id="input-status" class="input-status">Type: </div>
+            <div id="bonus-message" class="bonus-message"></div>
+            <div id="current-spell-number" class="spell-number">1</div>
+        </div>
+
+ 
+        <div class="right-panel">
+            <h2>Spells</h2>
+            <ul class="spell-list">
+                <li>
+                    <img src="invoker/cold snap.png" alt="Cold Snap">
+                    <div>Cold Snap - QQQ</div>
+                </li>
+                <li>
+                    <img src="invoker/ghost walk.png" alt="Ghost Walk">
+                    <div>Ghost Walk - QQW</div>
+                </li>
+                <li>
+                    <img src="invoker/ice wall.png" alt="Ice Wall">
+                    <div>Ice Wall - QQE</div>
+                </li>
+                <li>
+                    <img src="invoker/emp.png" alt="EMP">
+                    <div>EMP - WWW</div>
+                </li>
+                <li>
+                    <img src="invoker/tornado.png" alt="Tornado">
+                    <div>Tornado - WWQ</div>
+                </li>
+                <li>
+                    <img src="invoker/alacrity.png" alt="Alacrity">
+                    <div>Alacrity - WWE</div>
+                </li>
+                <li>
+                    <img src="invoker/sun strike.png" alt="Sun Strike">
+                    <div>Sun Strike - EEE</div>
+                </li>
+                <li>
+                    <img src="invoker/forge spirit.png" alt="Forge Spirit">
+                    <div>Forge Spirit - EEQ</div>
+                </li>
+                <li>
+                    <img src="invoker/chaos meteor.png" alt="Chaos Meteor">
+                    <div>Chaos Meteor - EEW</div>
+                </li>
+                <li>
+                    <img src="invoker/deafening blast.png" alt="Deafening Blast">
+                    <div>Deafening Blast - QWE</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Opening Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-cases.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="header.html">
+                    <img src="logo.png" alt="Epic Loot" class="glow-logo"></a>
+            </div>
+            <nav class="header_games">
+                <a href="#">Cases</a>
+                <a href="#">Daily game</a>
+                <a href="#">Plinko</a>
+                <a href="#">Crash</a>
+            </nav>
+        </div>
+        
+    </header>
+    <div class="panel-bar">
+        <!-- Example panel item -->
+        <div class="panel-item">
+            <img src="item1.png" alt="Item 1">
+
+        </div>
+        <div class="panel-item">
+            <img src="item2.png" alt="Item 2">
+
+        </div>
+        <div class="panel-item">
+            <img src="item3.png" alt="Item 3">
+
+        </div>
+        <div class="panel-item">
+            <img src="item4.png" alt="Item 4">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+        <div class="panel-item">
+            <img src="item5.png" alt="Item 5">
+
+        </div>
+   
+        
+        <!-- Add more items similarly -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    
+    <div class="content">
+        <h1 class="case-title">Epic Case</h1>
+        <div class="case-opening-section">
+            <!-- Добавляем здесь линию-указатель -->
+            <div class="center-line"></div>
+            
+            <div class="case-box">
+                <div class="item-roller" id="itemRoller">
+                    <!-- Предметы будут динамически добавляться сюда -->
+                </div>
+            </div>
+
+            <button class="open-case-btn" id="openCaseBtn">Open Case</button>
+        </div>
+
+        <div class="reward-section" id="rewardSection" style="display: none;">
+            <h2>You won:</h2>
+            <div class="reward-box">
+                <img id="rewardImage" src="" alt="Reward Item">
+                <p id="rewardName"></p>
+                <p id="rewardPrice"></p> <!-- Price element here -->
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="diagonal-panel">
+    <div class="panel-content">
+        <div class="case-left">
+            <img class="case-image" src="case-image.png" alt="Снова на завод">
+            <h2 class="case-title">Снова на завод</h2>
+            <p class="case-description">После первой смены на заводе, пора на вторую смену на EL!</p>
+            <div class="case-rating">
+                <span>Рейтинг:</span>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+
+        <div class="case-right">
+            <h3>Рекомендуем к открытию:</h3>
+            <div class="recommended-items">
+                <div class="recommended-item">
+                    <img src="item1.png" alt="Популярный предмет">
+                    <p class="recommended-title">Популярный</p>
+                    <p class="recommended-price">129грн</p>
+                </div>
+                <div class="recommended-item">
+                    <img src="item2.png" alt="Рекомендуемый предмет">
+                    <p class="recommended-price">129грн</p>
+                </div>
+                <div class="recommended-item">
+                    <img src="item3.png" alt="Рекомендуемый предмет">
+                    <p class="recommended-price">149грн</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="items-list" id="itemsList">
+    <h2>Все предметы</h2>
+    
+    <div class="items-container"></div>
+</div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="open_case.js"></script>
+</body>
+</html>

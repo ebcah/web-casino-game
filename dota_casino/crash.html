@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crash Game</title>
+    <link rel="stylesheet" href="style_crash.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="header.html">
+                <img src="logo.png" alt="Epic Loot" class="glow-logo"></a>
+            </div>
+            <nav class="header_games">
+                <a href="header.html">Case</a>
+                <a href="invoker.html">Daily game</a>
+
+                <a href="crash.html">Crash</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <h1>Crash Game</h1>
+        <div class="balance">
+            <span>Balance: </span><span id="balance">$100.00</span>
+        </div>
+        <div class="multiplier">
+            <span>Current Multiplier: </span><span id="current-multiplier">1.00x</span>
+        </div>
+        <div id="countdown"></div> 
+        <div class="animation">
+            <div class="line-container">
+                <div id="line" class="line"></div> 
+                <div id="multiplier-display" class="multiplier-display"></div> 
+            </div>
+            <div id="runner"></div>
+        </div>
+        <div class="controls">
+            <input type="number" id="bet-amount" placeholder="Enter your bet" min="0.01" step="0.01" />
+            <input type="number" id="auto-cashout" placeholder="Auto Cashout Multiplier" min="1.00" step="0.1" />
+            <button id="bet-button">Place Bet</button>
+            <button id="cashout-button" disabled>Cash Out</button>
+        </div>
+        <div id="message"></div>
+        <div id="game-log"></div> 
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="script_crash.js"></script>
+</body>
+</html>
